@@ -6,7 +6,7 @@ COPY yarn.lock package.json ./
 
 RUN yarn --frozen-lockfile
 
-COPY . .
+COPY . ./src
 
 EXPOSE 3000
 
