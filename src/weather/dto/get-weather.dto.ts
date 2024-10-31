@@ -14,7 +14,7 @@ export class GetWeatherDto {
 
     @IsString()
     @IsOptional()
-    part?: string;
+    exclude?: string;
 }
 
 

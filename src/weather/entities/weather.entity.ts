@@ -19,16 +19,16 @@ export class Weather implements OneCallResponse {
     timezone_offset: number;
 
     @Column('json', { nullable: true, })
-    current: CurrentWeather;
+    current?: CurrentWeather;
 
     @Column('json', { nullable: true, })
     minutely?: Minutely[];
 
     @Column('json', { nullable: true, })
-    hourly: Hourly[];
+    hourly?: Hourly[];
 
     @Column('json', { nullable: true, })
-    daily: Daily[];
+    daily?: Daily[];
 
     @Column('json', { nullable: true })
     alerts?: Alert[];

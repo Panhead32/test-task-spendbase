@@ -3,10 +3,10 @@ export type OneCallResponse = {
     lon: number
     timezone: string
     timezone_offset: number
-    current: CurrentWeather
+    current?: CurrentWeather | null
     minutely?: Minutely[] | null
-    hourly: Hourly[]
-    daily: Daily[]
+    hourly?: Hourly[] | null
+    daily?: Daily[] | null
     alerts?: Alert[] | null
 }
 
