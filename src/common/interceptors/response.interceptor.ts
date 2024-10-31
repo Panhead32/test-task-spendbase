@@ -1,7 +1,7 @@
 import { CallHandler, ExecutionContext, NestInterceptor } from '@nestjs/common';
 import { map, Observable } from 'rxjs';
 
-export class ResponseInterceptors implements NestInterceptor {
+export class WeatherResponseInterceptor implements NestInterceptor {
     intercept(context: ExecutionContext, handler: CallHandler): Observable<any> {
         return handler.handle().pipe(
             map(({ current }) => {

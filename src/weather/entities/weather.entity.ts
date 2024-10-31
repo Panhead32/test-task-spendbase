@@ -22,7 +22,7 @@ export class Weather implements OneCallResponse {
     current: CurrentWeather;
 
     @Column('json', { nullable: true, })
-    minutely: Minutely[];
+    minutely?: Minutely[];
 
     @Column('json', { nullable: true, })
     hourly: Hourly[];
@@ -31,5 +31,5 @@ export class Weather implements OneCallResponse {
     daily: Daily[];
 
     @Column('json', { nullable: true })
-    alerts: Alert[];
+    alerts?: Alert[];
 }
