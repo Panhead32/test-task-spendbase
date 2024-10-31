@@ -4,7 +4,7 @@ import { WeatherAPITypes } from './types';
 export class WeatherAPIGateway {
     constructor(private axiosInstance: AxiosInstance) {
         this.axiosInstance = axios.create({
-            baseURL: 'https://api.openweathermap.org/data/3.0/onecall',
+            baseURL: process.env.WEATHER_API_URL,
             params: {
                 appid: process.env.WEATHER_API_KEY,
             }
